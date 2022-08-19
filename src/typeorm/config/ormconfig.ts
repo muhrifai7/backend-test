@@ -38,9 +38,10 @@ const config: any = {
         ? "src/typeorm/subscriber"
         : "dist/typeorm/subscriber",
   },
-  // ssl: {
-  //   rejectUnauthorized: false,
-  // },
+  // for production
+  ssl: {
+    rejectUnauthorized: false,
+  },
   namingStrategy: new SnakeNamingStrategy(),
   // },
   // development: {
