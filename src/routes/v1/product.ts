@@ -7,7 +7,7 @@ import { validatorEdit } from "../../middleware/validation/users";
 
 const router = Router();
 
-router.get("/", [checkJwt, checkRole(["ADMINISTRATOR"], true)], list);
+router.get("/", list);
 
 router.post("/", create);
 
