@@ -19,12 +19,31 @@ export class Product {
   })
   name!: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   color!: string;
+
+  @Column({
+    nullable: true,
+  })
+  category!: string;
 
   @Column()
   description!: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
+  price_sale!: number;
+
+  @Column({
+    nullable: true,
+  })
+  price_buy!: number;
+
+  @Column({
+    nullable: true,
+  })
   file_name!: string;
 }

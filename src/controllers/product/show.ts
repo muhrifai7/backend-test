@@ -14,18 +14,16 @@ export const show = async (
 
   const productRepository = getRepository(Product);
   try {
-    const product = await productRepository.findOne(id, {
-      select: ["id", "name", "description"],
-    });
+    const product = await productRepository.findOne(id);
 
     if (!product) {
       const customError = new CustomError(
         404,
         "General",
-        `Department with id:${id} not found.`,
+        `Product with id:${id} not found.`,
         {
           code: 401,
-          message: `department with id:${id} doesn't exists.`,
+          message: `Product with id:${id} doesn't exists.`,
         }
       );
       return next(customError);

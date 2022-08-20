@@ -14,14 +14,14 @@ router.get(
   "/:id([0-9]+)",
   [
     checkJwt,
-    checkRole(["ADMINISTRATOR", "STANDARD", "MANAGER", "STAFF"], true),
+    // checkRole(["ADMINISTRATOR", "STANDARD", "MANAGER", "STAFF"], true),
   ],
   show_by_id
 );
 
 router.delete(
   "/:id([0-9]+)",
-  [checkJwt, checkRole(["ADMINISTRATOR"], true)],
+  // [checkJwt, checkRole(["ADMINISTRATOR"], true)],
   destroy
 );
 

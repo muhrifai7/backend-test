@@ -21,17 +21,18 @@ export const edit = async (
         `product with id:${id} not found.`,
         {
           code: 401,
-          message: `User not found`,
+          message: `product not found`,
         }
       );
       return next(customError);
     }
-    const newDate = {
+    const newData = {
       ...product,
       ...req.body,
     };
+    console.log(newData);
     try {
-      await productRepository.save(newDate);
+      await productRepository.save(newData);
       // res.customSuccess(200, 'User successfully saved.');
       return next(res.status(200).send(customResult(200, "success")));
     } catch (err) {

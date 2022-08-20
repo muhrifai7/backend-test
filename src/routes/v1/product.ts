@@ -13,7 +13,7 @@ router.post("/", create);
 
 router.get(
   "/:id([0-9]+)",
-  [checkJwt, checkRole(["ADMINISTRATOR"], true)],
+  // [checkJwt, checkRole(["ADMINISTRATOR"], true)],
   show
 );
 
@@ -25,7 +25,7 @@ router.patch(
 
 router.delete(
   "/:id([0-9]+)",
-  [checkJwt, checkRole(["ADMINISTRATOR"], true)],
+  // [checkJwt, checkRole(["ADMINISTRATOR"], true)],
   destroy
 );
 

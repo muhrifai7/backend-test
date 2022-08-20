@@ -35,6 +35,7 @@ export const list = async (req: Request, res: Response, next: NextFunction) => {
     }
     const response = {
       total_data: count,
+      limit,
       page,
       keyword,
       data: result,
