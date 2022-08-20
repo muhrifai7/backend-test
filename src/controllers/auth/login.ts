@@ -36,6 +36,7 @@ export const login = async (
       id: user.id,
       username: user.username,
       email: user.email,
+      role: user.role_name,
       created_at: user.created_at,
     };
 

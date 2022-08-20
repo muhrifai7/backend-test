@@ -30,7 +30,6 @@ export const edit = async (
       ...product,
       ...req.body,
     };
-    console.log(newData);
     try {
       await productRepository.save(newData);
       // res.customSuccess(200, 'User successfully saved.');

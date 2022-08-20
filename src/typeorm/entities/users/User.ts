@@ -11,6 +11,8 @@ import {
   ManyToOne,
 } from "typeorm";
 
+import { RoleType, Language } from "./userTypes";
+
 @Entity()
 export class TU_USER {
   @PrimaryGeneratedColumn()
@@ -33,6 +35,11 @@ export class TU_USER {
     default: true as boolean,
   })
   isActive!: boolean;
+
+  @Column({
+    default: "ADMINISTRATOR" as RoleType,
+  })
+  role_name!: string;
 
   @Column({
     nullable: true,
